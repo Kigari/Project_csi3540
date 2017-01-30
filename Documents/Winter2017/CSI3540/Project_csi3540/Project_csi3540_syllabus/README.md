@@ -15,8 +15,8 @@ Les fonctionnalités que je vais implementée:
 - Télécharger un document sur son syllabus(par ex des notes ou labs)
 - Faire un calendrier juste en rentrant des dates 
   
-La technologie qui va etre utilisé : HTML, CSS, JAVASCRIPT ET DU PHP
+La technologie qui va etre utilisé : HTML, CSS, JAVASCRIPT avec RUBY 
  
- NB: Je suis toujours pas certaine si je vais utiliser PHP ou Ruby on Rails . Cela pourrait peut etre Changer mais je vais toujours vous laisser savoir.
+ NB: Je suis toujours pas certaine si je vais utiliser Sinatra. Cela pourrait peut etre Changer mais je vais toujours vous laisser savoir.
  
  
