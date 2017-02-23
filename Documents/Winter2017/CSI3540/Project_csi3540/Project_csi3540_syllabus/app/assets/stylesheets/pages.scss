@@ -1,0 +1,32 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+ // some general css
+ background-color: #CB9CDC;
+}
+
+body.homepage {
+ // some css for homepage elements
+ background-color: #CB9CDC;
+}
+
+input[type=submit] {
+    width: 25%;
+    background-color: #45a049;
+}
+input[type=button] {
+    width: 25%;
+
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
