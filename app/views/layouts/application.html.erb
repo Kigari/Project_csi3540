@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProjectCsi3540Syllabus</title>
+    <%= csrf_meta_tags %>
+
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Syllabus Maker</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/pages/home">Home</a></li>
+          <li><a href="/pages/makeSyllabus_Page1">Make my syllabus</a></li>
+          <li><a href="/pages/contact">About Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/sessions/new"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+  </header>
+    <%= yield %>
+  <footer class="footer">
+    <small>
+      The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+      by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+    </small>
+    <nav>
+      <ul>
+        <li><%= link_to "About",   '#' %></li>
+        <li><%= link_to "Contact", '#' %></li>
+        <li><a href="http://news.railstutorial.org/">News</a></li>
+      </ul>
+    </nav>
+  </footer>
+  </body>
+</html>
