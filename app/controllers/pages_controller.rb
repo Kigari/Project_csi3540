@@ -7,8 +7,6 @@ class PagesController < ApplicationController
   def home
     if current_user
         redirect_to pages_makeSyllabus_Page1_path
-    else
-      redirect_to pages_home_path
     end
   end
 
