@@ -1,22 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'admin/index'
+  devise_for :users
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
 
   resources :users
+  resources :courses
 #set the index page / root url
   root 'pages#home'
 
-  get  'pages/login'
 
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
 
   get 'pages/home'
 
