@@ -7,7 +7,7 @@
 
 
 <div class="center jumbotron">
-  <form class="form-horizontal">
+  <div class="form-horizontal">
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="30"
            aria-valuemin="0" aria-valuemax="100" style="width:30%">
@@ -17,11 +17,11 @@
 
     <%= flash[:error] %>
 
+    <%= simple_form_for @course,:url => url_for(:controller => 'courses', :action => 'create') do |f| %>
 
     <div class="container">
       <h2>section 1: About the Course</h2>
       <div class="well">
-        <%= form_for :course,  url: {controller: "courses", action: "create"} do |f| %>
 
         <div class="form-group">
     <label class="control-label col-sm-2" for="code">Course code</label>
@@ -51,7 +51,6 @@
         <input type="text" class="form-control" name="course[course_prealables]" id="prealable" placeholder="Prealables de ce cours">
       </div>
   </div>
-
     </div>
     </div>
 
@@ -63,49 +62,46 @@
         <div class="form-group">
       <label class="control-label col-sm-2" for="prealable">Professeur Name</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="prealable" placeholder="Prealables de ce cours">
+        <input type="text" name="course[prof_name]" class="form-control" id="prealable" placeholder="Your Name">
       </div>
     </div>
 
   <div class="form-group">
       <label class="control-label col-sm-2" for="prealable">Professeur Email</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="prealable" placeholder="Enter your email">
+        <input type="text" name="course[prof_email]" class="form-control" id="prealable" placeholder="Enter your email">
       </div>
   </div>
 
   <div class="form-group">
       <label class="control-label col-sm-2" for="prealable">Professeur Web site</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="site" placeholder="Enter the website">
+        <input type="text" name="course[prof_website]" class="form-control" id="site" placeholder="Enter the website">
       </div>
   </div>
 
   <div class="form-group">
       <label class="control-label col-sm-2" for="prealable">TA</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="site" placeholder="Enter the website">
+        <input type="text" name="course[TA]" class="form-control" id="site" placeholder="Enter the website">
       </div>
   </div>
 
    <div class="form-group">
       <label class="control-label col-sm-2" for="prealable">Manuel</label>
       <div class="col-sm-8">
-        <textarea class="form-control" rows="5" id="manuel"></textarea>
+        <textarea class="form-control"  name="course[manuel]" rows="5" id="manuel"></textarea>
     </div>
     </div>
 
       </div>
     </div>
-<% end %>
-    <ul class="pager">
-      <li><a href="/pages/makeSyllabus_Page2">Next</a></li>
-   <!-- <li><%= link_to "Next!", '/pages/makeSyllabus_Page2', class: "btn btn-lg btn-primary" %></li> -->
-    </ul>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-8">
-      <button type="submit" class="btn btn-lg btn-success">Save</button>
+      <%= f.submit 'Save', class: 'btn btn-lg btn-success' %>
+      <%= link_to 'Next', pages_makeSyllabus_Page2_path, class:'btn btn-lg btn-primary' %>
     </div>
   </div>
-</form>
+        <% end %>
+</div>
 </div>

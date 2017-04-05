@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :courses
+
 #set the index page / root url
   root 'pages#home'
 
@@ -21,6 +22,11 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get  'pages/forgotPassword'
+
+  get  'pages/Thank_you'
+
+  get  'courses/View_syllabus'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

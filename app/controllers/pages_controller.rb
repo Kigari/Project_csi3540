@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 @title = 'Login Page';
   end
 
+
   def home
     if current_user
         redirect_to pages_makeSyllabus_Page1_path
@@ -11,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def makeSyllabus_Page1
-    #@course = Course.new
+    @course = Course.new
     @title = 'MakeSyllabus Page1';
     flash.now[:notice] = t("uploading_error")
     #redirect_to pages_home_path
@@ -19,6 +20,7 @@ class PagesController < ApplicationController
 
 
   def makeSyllabus_Page2
+    @course = Course.new
     @title = 'MakeSyllabus Page2';
   end
 
